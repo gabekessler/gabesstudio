@@ -8,10 +8,12 @@
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
+  <div id="content">
 
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield %>
-
+  <br class="clear" />
+  </div><!--content-->
 </body>
 </html>
