@@ -11,12 +11,16 @@
   
 </head>
 <body>
-  <div id="content">
+  <div id="wrapper">
+    <div id="header">
+      <%= link_to "gabesstudio home", root_url %>
+      
+    </div><!--name-->
 
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield %>
   <br class="clear" />
-  </div><!--content-->
+  </div><!--wrapper-->
 </body>
 </html>
