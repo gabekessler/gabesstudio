@@ -1,4 +1,8 @@
-/* @override http://gabesstudio.local/stylesheets/scaffold.css?1255370044 */
+/* @override 
+	http://gabesstudio.local/stylesheets/scaffold.css?1255370044
+	http://gabesstudio.local/stylesheets/scaffold.css?1255372781
+	http://gabesstudio.local/stylesheets/scaffold.css?1255375213
+*/
 
 /* @group RESET */
 
@@ -11,17 +15,33 @@
 	outline: none;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	font: 14px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	border: 10px solid #FFB03B;
+	height: 100%;
 }
 
 /* @end */
 
 /* @group STRUCTURE */
 
-#wrapper {
+.wrapper {
 	width: 900px;
 	margin: 0 auto;
+}
+
+#header {
+	padding-top: 25px;
+	height: 70px;
+	background-color: #FFB03B;
+}
+
+#content {
+	padding-top: 25px;
 }
 
 /* @end */
@@ -57,6 +77,17 @@ body {
 
 h1 {
 	line-height: 1.3em;
+}
+
+a#logo {
+	text-indent: -9999px;
+	background: url(../images/gs_css_logo.png) no-repeat 0 0;
+	width: 347px;
+	height: 45px;
+	display: block;
+}
+a#logo:hover {
+	background-position: 0 -45px;
 }
 
 /* @end */
