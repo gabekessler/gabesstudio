@@ -82,4 +82,11 @@ class PagesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # Makes first page the Home page
+  def redirect
+   @page = Page.first
+   redirect_to(@page) 
+  end
+  
 end

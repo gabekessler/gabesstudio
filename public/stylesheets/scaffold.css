@@ -1,72 +1,1395 @@
-html {
-	height: 100%;
-}
+/* @group reset */
 
-body { 
-	background-color: #fff; 
-	color: #333; 
+* {
 	margin: 0;
-	height: 100%;
-	}
-
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+	padding: 0;
+	font-size: 1em;
+	text-decoration: none;
+	border: none;
+	list-style: none;
+	outline: none;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+/* @end */
+
+/* @group default */
+
+body {
+	font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: #fff 0 1px 1px;
+	background-color: #222;
+	color: #222;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
-
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+.section {
+	margin-bottom: 25px;
 }
 
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+img {
+	vertical-align: bottom;
 }
 
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+/* @group anchor */
+
+a {
+	color: #39c;
+	font-weight: bold;
 }
 
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+a:hover,
+a:focus {
+	color: #069;
 }
 
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
+a:active {
+	color: #036;
 }
 
-#content {
-	border: 10px solid red;	
-	padding: 30px 30px;
-	height: 100%;
+/* @end */
+
+/* @group blockquote */
+
+blockquote {
+	font-family: Georgia;
+	font-style: italic;
+	color: #666;
+	background: url(../img/blockquote.png) no-repeat 0 4px;
+	margin-bottom: 20px;
 }
 
-.clear {
+blockquote p {
+	display: inline;
+	padding: 0 20px 0 22px;
+	background: url(../img/blockquote-p.png) no-repeat right 2px;
+}
+
+cite {
+	font-weight: bold;
+	font-style: normal;
+	display: block;
+	margin-top: -15px;
+}
+
+/* @end */
+
+strong {
+	color: #d82424;
+}
+
+small {
+	color: #999;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 60px;
+	padding: 0 20px;
+	background-color: #ddd;
+	margin-bottom: 20px;
 	clear: both;
 }
+
+.activatethedeathray h2 {
+	display: none;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+h3 a {
+	color: #222;
+}
+
+h3 a:hover,
+h3 a:focus {
+	text-decoration: underline;
+	color: #333;
+}
+
+h3 a:active {
+	color: #000;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group wrapper */
+
+#wrapper {
+	border: 10px solid #000;
+	padding: 30px 0;
+	background-color: #222;
+}
+
+.activatethedeathray #wrapper {
+	border: 0;
+	padding: 0;
+}
+
+/* @end */
+
+/* @group header */
+
+#header {
+	background-color: #d82424;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	right: 0;
+	z-index: 15;
+	height: 320px;
+	margin: -160px 0 0 250px;
+	border-right: 10px solid #b21919;
+	text-shadow: #d82424 0 1px 1px;
+}
+
+/* @group logo */
+
+#slogan {
+	display: none;
+}
+
+h1 a {
+	display: block;
+	width: 240px;
+	height: 140px;
+	text-indent: 150%;
+	overflow: hidden;
+	white-space: nowrap;
+	background: url(../img/logo.png) no-repeat 0 0;
+	cursor: default;
+}
+
+h1 a:focus,
+h1 a:active {
+	background-position: 0 -140px;
+}
+
+/* @end */
+
+/* @group navigation */
+
+#navigation {
+	line-height: 38px;
+	width: 240px;
+}
+
+#navigation em {
+	font-style: normal;
+}
+
+#navigation a {
+	float: left;
+	clear: both;
+	padding: 1px 20px;
+	color: #fff;
+	text-transform: lowercase;
+	background-color: #d82424;
+	-webkit-transition: background-color .1s linear;
+}
+
+#navigation a:hover,
+#navigation a:focus {
+	background-color: #b21919;
+	text-shadow: #b21919 0 1px 1px;
+}
+
+#navigation a:active {
+	padding: 2px 20px 0;
+}
+
+.work #navigation #nav-work a,
+.workdetail #navigation #nav-work a,
+.clients #navigation #nav-clients a,
+.about #navigation #nav-about a,
+.contact #navigation #nav-contact a,
+.contactus #navigation #nav-contact a,
+.contactus-thanks #navigation #nav-contact a,
+.hireus #navigation #nav-contact a,
+.hireus-step2 #navigation #nav-contact a,
+.hireus-step3 #navigation #nav-contact a,
+.hireus-step4 #navigation #nav-contact a,
+.hireus-thanks #navigation #nav-contact a {
+	color: #39c;
+	background-color: #fff;
+	text-shadow: #fff 0 1px 1px;
+}
+
+.work #navigation #nav-work a:hover,
+.workdetail #navigation #nav-work a:hover,
+.clients #navigation #nav-clients a:hover,
+.about #navigation #nav-about a:hover,
+.contact #navigation #nav-contact a:hover,
+.contactus #navigation #nav-contact a:hover,
+.contactus-thanks #navigation #nav-contact a:hover,
+.hireus #navigation #nav-contact a:hover,
+.hireus-step2 #navigation #nav-contact a:hover,
+.hireus-step3 #navigation #nav-contact a:hover,
+.hireus-step4 #navigation #nav-contact a:hover,
+.hireus-thanks #navigation #nav-contact a:hover,
+.work #navigation #nav-work a:focus,
+.workdetail #navigation #nav-work a:focus,
+.clients #navigation #nav-clients a:focus,
+.about #navigation #nav-about a:focus,
+.contact #navigation #nav-contact a:focus,
+.contactus #navigation #nav-contact a:focus,
+.contactus-thanks #navigation #nav-contact a:focus,
+.hireus #navigation #nav-contact a:focus,
+.hireus-step2 #navigation #nav-contact a:focus,
+.hireus-step3 #navigation #nav-contact a:focus,
+.hireus-step4 #navigation #nav-contact a:focus,
+.hireus-thanks #navigation #nav-contact a:focus {
+	color: #069;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group content */
+
+#content {
+	width: 740px;
+	margin: 20px auto;
+	background-color: #fff;
+	border-right: 240px solid #222;
+}
+
+.activatethedeathray #content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 320px;
+	margin: -160px 0 0 -490px;
+	border-right: 0;
+}
+
+.node {
+	height: 320px;
+	position: relative;
+}
+
+.activatethedeathray .node {
+	display: none;
+}
+
+.work #work.node,
+.clients #clients.node,
+.about #about.node,
+.contact #contact.node,
+.contactus #contactus.node,
+.contactus-thanks #contactus.node,
+.hireus #hireus.node,
+.hireus-step2 #hireus.node,
+.hireus-step3 #hireus.node,
+.hireus-step4 #hireus.node,
+.hireus-thanks #hireus.node {
+	display: block;
+}
+
+/* @end */
+
+/* @group footer */
+
+#footer {
+	width: 740px;
+	color: #666;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: #222 0 1px 1px;
+	overflow: hidden;
+}
+
+#footer .street-address {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+#footer .blog {
+	background: none;
+	margin: 0;
+}
+
+.activatethedeathray #footer {
+	position: absolute;
+	width: 740px;
+	top: 50%;
+	left: 50%;
+	margin: 180px 0 0 -510px;
+}
+
+#footer strong {
+	float: right;
+	margin-left: 7px;
+	padding-left: 14px;
+	background: url(../img/footer-li.png) no-repeat 0 center;
+}
+
+#footer a {
+	color: #999;
+}
+
+#footer a:hover,
+#footer a:focus {
+	color: #ccc;
+}
+
+#footer a:active {
+	color: #fff;
+}
+
+#footer ul,
+#footer p {
+	float: right;
+}
+
+#footer li {
+	float: left;
+	margin-left: 7px;
+	padding-left: 14px;
+	background: url(../img/footer-li.png) no-repeat 0 center;
+}
+
+#footer li.icheated {
+	padding: 0;
+	margin: 0;
+}
+
+#footer p {
+	clear: both;
+}
+
+#footer small {
+	color: #555;
+}
+
+/* @end */
+
+/* @group donotwant */
+
+#donotwant {
+	display: none;
+}
+
+.activatethedeathray #donotwant {
+	display: block;
+}
+
+#donotwant li {
+	position: absolute;
+	background-color: #000;
+	z-index: 10;
+}
+
+#dnw-top {
+	height: 10px;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+#dnw-right {
+	width: 10px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#dnw-bottom {
+	height: 10px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#dnw-left {
+	width: 10px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/* @end */
+
+/* @group specific */
+
+/* @group work */
+#work {
+	border-right:20px solid #FFF;
+	overflow:hidden;
+}
+
+#work ul {
+	margin: 20px 0 0 20px;
+	height: 280px;
+	width: 2000px;
+}
+
+#work ul li {
+	border-right: 20px solid #fff;
+	height: 280px;
+	float: left;
+	width: 100px;
+	overflow: hidden;
+	position: relative;
+/*	-webkit-transition: all .5s ease-in;*/
+	opacity: 1;
+}
+
+#work ul li div {
+	position: absolute;
+	width: 160px;
+	height: 280px;
+	left: 240px;
+	top: 0;
+/*	opacity: 0;*/
+/*	-webkit-transition: all .75s ease-in;*/
+}
+
+#work ul:hover li {
+/*	opacity: .75;*/
+}
+
+/*.safari #work ul:hover li {
+	width: 40px;
+}*/
+
+#work ul li:hover div {
+/*	opacity: 1;*/
+}
+
+#work ul li:hover {
+/*	opacity: 1;*/
+}
+
+/*.safari #work ul li:hover {
+	width: 400px;
+}*/
+
+#work img {
+/*	-webkit-transition: all .5s ease-in;*/
+	height: 280px;
+	padding: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/*.safari #work ul:hover li img {
+	height: 240px;
+	padding: 20px 0;
+}
+
+.safari #work ul li:hover img {
+	height: 280px;
+	padding: 0;
+}*/
+
+#work h3 {
+	padding-top: 10px;
+}
+
+#work .link {
+	margin-bottom: 10px;
+	height: 20px;
+	overflow: hidden;
+	width: 160px;
+}
+
+#work .link a {
+	font-weight: normal;
+}
+
+#work .permlink {
+	position: absolute;
+	width: 160px;
+	bottom: 0;
+	left: 0;
+	text-transform: lowercase;
+	line-height: 40px;
+	border-top: 2px solid #ddd;
+}
+
+#work .permlink a {
+	display: block;
+	background: url(../img/permlink.png) no-repeat right 13px;
+}
+
+/* @end */
+
+/* @group about */
+
+#about {
+	height: 300px;
+	padding: 20px 20px 0;
+}
+
+#about-intro {
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#about-intro small {
+	font-size: 14px;
+	display: block;
+	color: #222;
+	font-weight: bold;
+}
+
+#about-about {
+	width: 340px;
+	float: left;
+}
+
+#about-about img {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+#about-about p {
+	margin-bottom: 20px;
+}
+
+#about-quotes {
+	width: 340px;
+	float: right;
+	border-top: 2px solid #ddd;
+	padding-top: 11px;
+}
+
+#about-quotes blockquote {
+	padding: 0 10px;
+	background-position: 10px 4px;
+}
+
+#about-quotes cite {
+	border-bottom: 2px solid #ddd;
+	padding: 0 10px 11px;
+	margin-bottom: 11px;
+}
+
+/*#about-quotes p {
+	margin-bottom: 20px;
+}*/
+
+/*#about-quotes {
+	border-top: 2px solid #ddd;
+	margin-top: 19px;
+	padding-top: 14px;
+}
+
+#about-quotes div {
+	width: 340px;
+	float: left;
+}
+
+#first-quote {
+	margin-right: 20px;
+}*/
+
+/* @end */
+
+/* @group clients */
+
+#clients {
+	height: 300px;
+	padding: 20px 0 0 20px;
+}
+
+#clients li {
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 150px;
+	padding-left: 10px;
+	line-height: 40px;
+	background-color: #ddd;
+	text-shadow: #ddd 0 1px 1px;
+	color: #666;
+}
+
+#clients li a {
+	font-weight: normal;
+	display: block;
+	line-height: 38px;
+	margin-left: -10px;
+	padding: 1px 0 1px 10px;
+	background-color: #ddd;
+	-webkit-transition: background-color .1s linear;
+}
+
+li#clients-you a {
+	background-color: #39c;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: #39c 0 1px 1px;
+}
+
+#clients li a:hover,
+#clients li a:focus {
+	background-color: #ccc;
+	text-shadow: #ccc 0 1px 1px;
+}
+
+li#clients-you a:hover,
+li#clients-you a:focus {
+	background-color: #069;
+	text-shadow: #069 0 1px 1px;
+}
+
+#clients li a:active {
+	padding: 2px 0 0 10px;
+}
+
+#clients p {
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+#clients p small {
+	display: block;
+	font-size: 14px;
+}
+
+/* @end */
+
+/* @group contact */
+
+/* @group biglinks */
+
+#biglinks {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#biglinks li {
+	float: left;
+	margin-right: 20px;
+}
+
+#biglinks li a {
+	float: left;
+	width: 220px;
+	height: 40px;
+	padding: 100px 0 140px;
+	background: #ddd url(../img/contact.png) no-repeat center 160px;
+	text-align: center;
+	font-size: 18px;
+	text-transform: lowercase;
+	text-shadow: #ddd 0 1px 1px;
+	-webkit-transition: background-color .1s linear;
+}
+
+#biglinks li a small {
+	font-size: 14px;
+	display: block;
+}
+
+#biglinks li a:hover,
+#biglinks li a:focus {
+	background-color: #ccc;
+	text-shadow: #ccc 0 1px 1px;
+}
+
+#biglinks li a:active {
+	padding: 101px 0 139px;
+	background-position: center 161px;
+}
+
+/* @end */
+
+/* @group timvandamme */
+
+#timvandamme {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 220px;
+	border-top: 2px solid #ddd;
+}
+
+#timvandamme a {
+	display: block;
+}
+
+#timvandamme li {
+	border-bottom: 2px solid #ddd;
+	padding: 8px 10px;
+}
+
+#timvandamme small,
+#timvandamme .street-address,
+#timvandamme .country-name {
+	display: block;
+}
+
+#timvandamme .type,
+#timvandamme .fn {
+	display: none;
+}
+
+#timvandamme .org {
+	font-size: 18px;
+}
+
+#timvandamme .org a {
+	color: #d82424;
+	padding: 14px 0;
+}
+
+#timvandamme .org a:hover,
+#timvandamme .org a:focus {
+	color: #b21919;
+}
+
+#timvandamme .org a:active {
+	padding: 15px 0 13px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group hireus */
+
+#hireus fieldset {
+	background: #fff url(../img/fieldset.png) no-repeat 500px 80px;
+	position: relative;
+}
+
+.activatethedeathray #hireus fieldset {
+	display: none;
+}
+
+.hireus #hireus fieldset#hireus-step1,
+.hireus-step2 #hireus fieldset#hireus-step2,
+.hireus-step3 #hireus fieldset#hireus-step3,
+.hireus-step4 #hireus fieldset#hireus-step4,
+.hireus-thanks #hireus fieldset#hireus-thanks {
+	display: block;
+}
+
+#hireus h3 {
+	display: none;
+}
+
+#hireus h4 {
+	background-color: #ddd;
+	padding: 10px 20px;
+	line-height: 25px;
+	text-shadow: #ddd 0 1px 1px;
+	margin-bottom: 20px;
+}
+
+#hireus h4 small {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 15px;
+}
+
+#hireus .progress {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+#hireus .progress li {
+	float: left;
+	margin-left: 20px;
+	line-height: 40px;
+	background-color: #bbb;
+	width: 40px;
+	color: #666;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: #bbb 0 1px 1px;
+}
+
+#hireus .progress li strong,
+#hireus .progress li a {
+	display: block;
+}
+
+#hireus .progress li strong {
+	background-color: #fff;
+	color: #333;
+	text-shadow: #fff 0 1px 1px;
+}
+
+#hireus .progress li a {
+	color: #ddd;
+	line-height: 38px;
+	padding: 1px 0;
+	background-color: #aaa;
+}
+
+#hireus .progress li a:hover,
+#hireus .progress li a:focus {
+	color: #fff;
+}
+
+#hireus .progress li a:active {
+	padding: 2px 0 0;
+}
+
+#hireus label {
+	float: left;
+	width: 180px;
+	padding-left: 20px;
+	line-height: 40px;
+}
+
+form label {
+	font-weight: bold;
+}
+
+#hireus p {
+	width: 100%;
+	float: left;
+	clear: both;
+	width: 500px;
+}
+
+form p {
+	margin-bottom: 20px;
+}
+
+#hireus #hireus-thanks p {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+
+#hireus p.button {
+	margin: 0;
+}
+
+#hireus p small {
+	position: absolute;
+	top: 95px;
+	right: 40px;
+	width: 180px;
+	color: #333;
+	display: none;
+	text-shadow: #ddd 0 1px 1px;
+	background-color: #ddd;
+}
+
+#hireus p.selected small {
+	display: block;
+}
+
+#hireus p label small {
+	position: relative;
+	top: auto;
+	right: auto;
+	display: inline !important;
+	width: auto;
+	color: #999;
+	background-color: transparent;
+	text-shadow: #fff 0 1px 1px;
+}
+
+#hireus p.selected {
+	background: url(../img/fieldset-selected.png) no-repeat right 13px;
+}
+
+#hireus p.selected.forgotten {
+	background: url(../img/fieldset-selected-forgotten.png) no-repeat right 13px;
+}
+
+form input,
+form textarea {
+	border: 2px solid #ddd;
+	padding: 8px;
+	height: 20px;
+	color: #999;
+}
+
+#hireus input,
+#hireus textarea {
+	width: 260px;
+}
+
+#hireus form input.subject {
+	display: none;
+}
+
+#hireus textarea {
+	width: 440px;
+	height: 200px;
+	margin-left: 20px;
+}
+
+#hireus #hireus-step3 p {
+	margin: 0;
+}
+
+#hireus form .required input,
+#hireus form .forgotten input {
+	background: url(../img/fieldset-required.png) no-repeat right center;
+	padding-right: 28px;
+}
+
+#hireus .required input,
+#hireus .forgotten input {
+	width: 240px;
+}
+
+form .forgotten input,
+form .forgotten input:hover {
+	border-color: #d82424;
+}
+
+form .forgotten input:focus {
+	border-color: #b21919;
+}
+
+form input:hover,
+form textarea:hover {
+	border-color: #ccc;
+	color: #666;
+}
+
+form input:focus,
+form textarea:focus {
+	border-color: #bbb;
+	color: #333;
+}
+
+form .button a {
+	line-height: 38px;
+	padding: 1px 0;
+	text-align: center;
+	color: #fff;
+	text-transform: lowercase;
+	background-color: #39c;
+	-webkit-transition: background-color .1s linear;
+	text-shadow: #39c 0 1px 1px;
+}
+
+/*form .button a.disabled,
+form .button a.disabled:hover,
+form .button a.disabled:focus {
+	background-color: #999;
+	cursor: default;
+	text-shadow: #999 0 1px 1px;
+}*/
+
+#hireus .button a {
+	position: absolute;
+	top: 240px;
+	right: 20px;
+	border: 20px solid #fff;
+	border-width: 20px 0 0 20px;
+	width: 100px;
+}
+
+#hireus #hireus-step4 .button a {
+	width: 340px;
+	border: 0;
+	top: 260px;
+}
+
+form .button a:hover,
+form .button a:focus {
+	background-color: #069;
+	text-shadow: #069 0 1px 1px;
+}
+
+form .button a:active {
+	padding: 2px 0 0;
+}
+
+#hireus #hireus-thanks,
+#hireus #hireus-step4 {
+	background: none;
+}
+
+#hireus #hireus-thanks p {
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 140px;
+	text-transform: lowercase;
+}
+
+#hireus #hireus-thanks p small {
+	position: relative;
+	top: 0;
+	right: 0;
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	color: #999;
+	text-shadow: #fff 0 1px 1px;
+}
+
+#hireus dl {
+	float: left;
+	width: 160px;
+	margin-left: 20px;
+	overflow: hidden;
+}
+
+input.special {
+	display:none;
+}
+
+#hireus dl dt {
+	font-weight: bold;
+	height: 20px;
+	overflow: hidden;
+}
+
+#hireus dl dd {
+	margin-bottom: 20px;
+	height: 20px;
+	overflow: hidden;
+}
+
+#hireus dl#hireus-summary-step3 {
+	width: 340px;
+}
+
+#hireus dl#hireus-summary-step3 dd {
+	height: 140px;
+	margin: 0;
+	overflow: auto;
+	padding-right: 5px;
+}
+
+/* @end */
+
+
+/* @group contactus */
+
+#contactus {
+	padding: 20px;
+}
+
+.activatethedeathray #contactus fieldset {
+	display: none;
+}
+
+.contactus #contactus fieldset#contactus-form,
+.contactus-thanks #contactus fieldset#contactus-thanks {
+	display: block;
+}
+
+#contactus h3 {
+	display: none;
+}
+
+#contactus textarea {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 320px;
+	height: 200px;
+}
+
+#contactus .button a {
+	position: absolute;
+	top: 260px;
+	right: 20px;
+	width: 340px;
+}
+
+#contactus-help {
+	background-color: #ddd;
+	padding: 20px;
+	width: 300px;
+	position: absolute;
+	top: 200px;
+	left: 20px;
+	text-shadow: #ddd 0 1px 1px;
+}
+
+#contactus label {
+	float: left;
+	line-height: 40px;
+	width: 120px;
+}
+
+#contactus input {
+	width: 200px;
+}
+
+#contactus #contactus-thanks p {
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 140px;
+	text-transform: lowercase;
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+
+#contactus #contactus-thanks p small {
+	position: relative;
+	top: 0;
+	right: 0;
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	color: #999;
+	text-shadow: #fff 0 1px 1px;
+}
+
+/* @end */
+
+/* @group 404 */
+
+body#error {
+	background-color: #fff;
+}
+
+body#error #donotwant {
+	display: block;
+}
+
+body#error #donotwant li {
+	background-color: #ddd;
+}
+
+body#error p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -285px 0 0 -325px;
+}
+
+body#error p a {
+	display: block;
+	padding-top: 520px;
+	text-align: center;
+	width: 650px;
+	background: url(../img/404.png) no-repeat 0 0;
+	color: #222;
+	font-size: 18px;
+}
+
+body#error p a:active {
+	background-position: -650px 0;
+}
+
+body#error p a small {
+	display: block;
+	font-size: 14px;
+}
+
+/* @end */
+
+/* @group workdetail */
+
+#workdetail {
+	overflow: hidden;
+	position: relative;
+}
+
+#workdetail p {
+	margin-bottom: 20px;
+}
+
+#workdetail .copy {
+	float: right;
+	width: 220px;
+	padding: 80px 20px 0 0;
+}
+
+#workdetail h2 {
+	font-size: 24px;
+	line-height: 30px;
+	padding: 0;
+	background-color: transparent;
+	margin-bottom: 20px;
+	clear: none;
+}
+
+#workdetail .link {
+	margin-top: -20px;
+	height: 20px;
+	overflow: hidden;
+}
+
+#workdetail small {
+	float: left;
+	background-color: #666;
+	color: #fff;
+	font-weight: bold;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 0 4px;
+	text-shadow: #666 0 1px 1px;
+	margin: 2px 7px 0 0;
+	line-height: 16px;
+}
+
+#workdetail .intro {
+	font-weight: bold;
+}
+
+#workdetail .large {
+	padding: 20px 0 0 20px;
+}
+
+#workdetail .medium {
+	height: 220px;
+	padding: 0 0 20px 20px;
+}
+
+#workdetail .medium li {
+	float: left;
+	margin-right: 20px;
+}
+
+#paging {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 220px;
+	height: 40px;
+}
+
+#paging li {
+	float: left;
+	margin-right: 20px;
+}
+
+#paging li a {
+	float: left;
+	background-color: #d82424;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	text-indent: 150%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#paging-newer a {
+	background-image: url(../img/work-newer.png);
+}
+
+#paging-older a {
+	background-image: url(../img/work-older.png);
+}
+
+#paging li a:hover,
+#paging li a:focus {
+	background-color: #b21919;
+}
+
+#paging li a:active {
+	background-position: 0 1px;
+}
+
+/* @end */
+
+/* @group blog */
+
+#blog {
+	padding: 60px 135px 40px;
+}
+
+#blog h2 {
+	font-size: 24px;
+	line-height: 30px;
+	padding: 0;
+	background-color: transparent;
+	margin-bottom: 20px;
+	clear: none;
+}
+
+#blog .postlist {
+	border-bottom: 2px solid #ddd;
+	padding: 0;
+}
+
+#blog .postlist li {
+	border-top: 2px solid #ddd;
+	padding: 10px 0;
+	list-style: none;
+}
+
+.postlist small {
+	float: right;
+}
+
+#blog p,
+#blog ul,
+#blog ol {
+	margin-bottom: 20px;
+}
+
+#blog h3 {
+	margin-bottom: 20px;
+}
+
+#blog h3 a {
+	font-weight: normal;
+}
+
+#blog h3 small {
+	float: right;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+#blog .intro {
+	margin-bottom: 20px;
+	background: #ddd;
+	padding: 20px;
+	text-shadow: #ddd 0 1px 1px;
+}
+
+#blog .intro p {
+	margin: 0;
+}
+
+#blog .center {
+	text-align: center;
+}
+
+#blog .right {
+	float: right;
+	margin: 0 0 20px 20px;
+	text-align: center;
+}
+
+#blog .image strong {
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+}
+
+#blog ul,
+#blog ol {
+	padding-left: 20px;
+}
+
+#blog ul li {
+	list-style: disc;
+}
+
+#blog ol li {
+	list-style: decimal;
+}
+
+/* @end */
+
+/* @end */
