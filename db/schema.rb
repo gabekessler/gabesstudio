@@ -9,13 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091010031334) do
+ActiveRecord::Schema.define(:version => 20091013133056) do
 
   create_table "pages", :force => true do |t|
     t.text     "pagetext"
     t.string   "header"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

@@ -1,9 +1,17 @@
 <h1>Editing page</h1>
 
-<% form_for(@page) do |f| %>
+<% form_for :page, @page, :html => { :multipart => true } do |f| %>
+
   <%= f.error_messages %>
-  <p><%= f.text_field :header %></p>
-  <p><%= f.text_area :pagetext %></p>
+  <p>
+    <%= f.text_field :header %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.text_area :pagetext %>
+  </p>
   <p>
     <%= f.submit 'Update' %>
   </p>
