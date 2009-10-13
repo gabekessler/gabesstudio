@@ -20,9 +20,16 @@
   
     <div id="content">
       <div class="wrapper">
-<p style="color: green"><%= flash[:notice] %></p>
+        <div id="left_column">
+          <% if flash[:notice] %>
+            <p class="notice"><%= flash[:notice] %></p>
+          <% end -%>
 
 <%= yield %>
+        </div><!--left_column-->
+        <div id="right_column">
+          
+        </div><!--right_column-->
   <br class="clear" />
   </div><!--wrapper-->
     

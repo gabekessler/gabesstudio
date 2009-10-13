@@ -1,8 +1,5 @@
 /* @override 
-	http://gabesstudio.local/stylesheets/scaffold.css?1255370044
-	http://gabesstudio.local/stylesheets/scaffold.css?1255372781
-	http://gabesstudio.local/stylesheets/scaffold.css?1255375213
-	http://gabesstudio.local/stylesheets/scaffold.css?1255377747
+	http://gabesstudio.local/stylesheets/scaffold.css?1255456288
 */
 
 /* @group RESET */
@@ -47,6 +44,17 @@ body {
 #content {
 	padding-top: 25px;
 	border-top: 1px solid #fff;
+}
+
+#left_column {
+	width: 575px;
+	float: left;
+	padding-right: 25px;
+}
+
+#right_column {
+	width: 300px;
+	float: left;
 }
 
 /* @end */
@@ -122,6 +130,17 @@ input, textarea {
 	border: 4px solid #999;
 	font-size: 1.2em;
 	line-height: 1.3em;
+}
+
+/* @end */
+
+/* @group NOTICES */
+
+.notice {
+	color: #fcff7e;
+	background-color: #ff7922;
+	padding: 10px;
+	border: 5px solid #fcff7e;
 }
 
 /* @end */
