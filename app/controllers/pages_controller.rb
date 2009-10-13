@@ -88,6 +88,5 @@ class PagesController < ApplicationController
    @page = Page.first
    redirect_to(@page) 
   end
-
   
 end

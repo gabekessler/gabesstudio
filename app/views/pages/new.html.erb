@@ -1,6 +1,6 @@
 <h1>New page</h1>
 
-<% form_for :page, @page, :url => new_page_path, :html => { :multipart => true } do |f| %>
+<% form_for @page, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.text_field :header %>
