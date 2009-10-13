@@ -2,6 +2,7 @@
 	http://gabesstudio.local/stylesheets/scaffold.css?1255370044
 	http://gabesstudio.local/stylesheets/scaffold.css?1255372781
 	http://gabesstudio.local/stylesheets/scaffold.css?1255375213
+	http://gabesstudio.local/stylesheets/scaffold.css?1255377747
 */
 
 /* @group RESET */
@@ -20,9 +21,11 @@ html {
 }
 
 body {
-	font: 14px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 14px/20px "Helvetica Neue", Helvetica, Geneva, sans-serif;
 	border: 10px solid #FFB03B;
 	height: 100%;
+	padding-bottom: 260px;
+	background-color: #ccc;
 }
 
 /* @end */
@@ -38,10 +41,12 @@ body {
 	padding-top: 25px;
 	height: 70px;
 	background-color: #FFB03B;
+	border-bottom: 1px solid #999;
 }
 
 #content {
 	padding-top: 25px;
+	border-top: 1px solid #fff;
 }
 
 /* @end */
@@ -75,6 +80,20 @@ body {
 
 /* @group TEXT */
 
+a {
+	background-color: #494949;
+	color: #fff;
+	padding: 1px 2px;
+}
+a:hover {
+	color: #494949;
+	background-color: #b7baba;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
 h1 {
 	line-height: 1.3em;
 }
@@ -83,11 +102,26 @@ a#logo {
 	text-indent: -9999px;
 	background: url(../images/gs_css_logo.png) no-repeat 0 0;
 	width: 347px;
-	height: 45px;
+	height: 43px;
 	display: block;
 }
 a#logo:hover {
 	background-position: 0 -45px;
+}
+
+/* @end */
+
+/* @group FORMS */
+
+form {
+	width: 500px;
+}
+
+input, textarea {
+	padding: 10px;
+	border: 4px solid #999;
+	font-size: 1.2em;
+	line-height: 1.3em;
 }
 
 /* @end */
