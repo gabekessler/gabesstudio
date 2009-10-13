@@ -138,6 +138,10 @@ input, textarea {
 	line-height: 1.3em;
 }
 
+.title_cell {
+	width: 200px;
+}
+
 /* @end */
 
 /* @group NOTICES */
