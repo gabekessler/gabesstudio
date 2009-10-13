@@ -8,7 +8,7 @@
   </p>
   
   <p>
-    <%= image_tag @page.image.url(:small) %>&nbsp;<%= f.file_field :image %>
+    <%= image_tag @page.image.url(:small), :class => "thumb" %>&nbsp;<%= f.file_field :image %>
   </p>
   <p>
     <%= f.text_area :pagetext %>

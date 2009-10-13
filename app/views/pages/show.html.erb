@@ -1,7 +1,9 @@
-<h1><%= @page.header %></h1>
+<% title "#{@page.header}" %>
+
+<h1><%= yield(:title) %></h1>
 
 <% if @page.image? %>
-  <%= image_tag @page.image.url(:long) %>
+  <%= image_tag @page.image.url(:long), :class => "long_image" %>
 <% end -%>
 
 

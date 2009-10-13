@@ -76,7 +76,13 @@ body {
 	font-family: Verdana, Helvetica, Tahoma, sans-serif;	
 }
 
+img {
+	border: 10px solid #787878;
+}
 
+img.thumb {
+	border-width: 4px;
+}
 
 /* @end */
 
