@@ -62,7 +62,7 @@ class GalleryImagesController < ApplicationController
     respond_to do |format|
       if @gallery_image.update_attributes(params[:gallery_image])
         flash[:notice] = 'GalleryImage was successfully updated.'
-        format.html { redirect_to(@gallery_image) }
+        format.html { redirect_to() }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

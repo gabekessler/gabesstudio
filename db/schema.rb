@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091014143808) do
+ActiveRecord::Schema.define(:version => 20091014202803) do
 
   create_table "gallery_images", :force => true do |t|
     t.string   "title",              :limit => 100
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20091014143808) do
   create_table "projects", :force => true do |t|
     t.string   "title",           :limit => 100
     t.string   "link"
-    t.string   "type",            :limit => 100
+    t.string   "project_type",    :limit => 100
     t.text     "text",            :limit => 1500
     t.datetime "completion_date"
     t.datetime "created_at"

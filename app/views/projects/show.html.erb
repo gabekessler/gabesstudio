@@ -10,7 +10,7 @@
 
 <p>
   <b>Type:</b>
-  <%=h @project.type %>
+  <%=h @project.project_type %>
 </p>
 
 <p>
@@ -20,12 +20,12 @@
 
 <p>
   <b>Completion date:</b>
-  <%=h @project.completion_date %>
+  <%=h @project.completion_date.strftime("%m/%d/%y") %>
 </p>
 
 <h2>Gallery Images</h2>
     <% for gallery_image in @gallery_images %>
-        <%= gallery_image.title %>
+        <%= image_tag gallery_image.image.url(:long), :class => "long_image" %>
     <% end %>
 
 <br class="clear" />
