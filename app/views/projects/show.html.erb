@@ -1,34 +1,30 @@
+  <h1><%=h @project.title %></h1>
+
 <p>
-  <b>Title:</b>
-  <%=h @project.title %>
+<%= link_to "#{@project.link}", "http://#{@project.link}" %>
 </p>
 
 <p>
-  <b>Link:</b>
-  <%=h @project.link %>
-</p>
-
-<p>
-  <b>Type:</b>
+  <strong>Category</strong>
   <%=h @project.project_type %>
 </p>
 
 <p>
-  <b>Text:</b>
   <%=h @project.text %>
 </p>
 
 <p>
-  <b>Completion date:</b>
+  <strong>Completion date:</strong>
   <%=h @project.completion_date.strftime("%m/%d/%y") %>
 </p>
 
+<div id="gallery_area">
 <h2>Gallery Images</h2>
     <% for gallery_image in @gallery_images %>
         <%= image_tag gallery_image.image.url(:long), :class => "long_image" %>
     <% end %>
-
 <br class="clear" />
+</div><!--gallery_area-->
 
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

@@ -5,9 +5,8 @@
 <% @projects.each do |project| %>
   <tr>
     <td><%= link_to "#{project.title}", project %></td>
-    <td><%= link_to "#{project.link}", "http://#{project.link}" %></td>
-    <td><%=h project.text %></td>
     <td><%=h project.completion_date.strftime("%m/%d/%y") %></td>
+    <td></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
