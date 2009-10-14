@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @project.title %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%=h @project.link %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @project.type %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @project.text %>
+</p>
+
+<p>
+  <b>Completion date:</b>
+  <%=h @project.completion_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
