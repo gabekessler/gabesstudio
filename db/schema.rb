@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20091014143808) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -41,7 +42,6 @@ ActiveRecord::Schema.define(:version => 20091014143808) do
     t.datetime "completion_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "project_id"
   end
 
 end
