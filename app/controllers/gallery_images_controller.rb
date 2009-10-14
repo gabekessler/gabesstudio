@@ -1,10 +1,12 @@
 class GalleryImagesController < ApplicationController
   layout 'application'
   
+  before_filter :get_project
+  
   # GET /gallery_images
   # GET /gallery_images.xml
   def index
-    @gallery_images = GalleryImage.all
+    @gallery_images = @project.gallery_images.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +17,7 @@ class GalleryImagesController < ApplicationController
   # GET /gallery_images/1
   # GET /gallery_images/1.xml
   def show
-    @gallery_image = GalleryImage.find(params[:id])
+    @gallery_image = @project.gallery_images.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +28,7 @@ class GalleryImagesController < ApplicationController
   # GET /gallery_images/new
   # GET /gallery_images/new.xml
   def new
-    @gallery_image = GalleryImage.new
+    @gallery_image = @project.gallery_images.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,30 +38,26 @@ class GalleryImagesController < ApplicationController
 
   # GET /gallery_images/1/edit
   def edit
-    @gallery_image = GalleryImage.find(params[:id])
+    @gallery_image = @project.gallery_images.find(params[:id])
   end
 
   # POST /gallery_images
   # POST /gallery_images.xml
   def create
-    @gallery_image = GalleryImage.new(params[:gallery_image])
+    @gallery_image = @project.gallery_images.new(params[:gallery_image])
 
     respond_to do |format|
-      if @gallery_image.save
+      @gallery_image.save
         flash[:notice] = 'GalleryImage was successfully created.'
-        format.html { redirect_to(@gallery_image) }
-        format.xml  { render :xml => @gallery_image, :status => :created, :location => @gallery_image }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @gallery_image.errors, :status => :unprocessable_entity }
-      end
+        format.html { redirect_to() }
+        format.xml  { render :xml => @gallery_image, :status => :created, :location => [@project, @gallery_image] }
     end
   end
 
   # PUT /gallery_images/1
   # PUT /gallery_images/1.xml
   def update
-    @gallery_image = GalleryImage.find(params[:id])
+    @gallery_image = @project.gallery_images.find(params[:id])
 
     respond_to do |format|
       if @gallery_image.update_attributes(params[:gallery_image])
@@ -76,12 +74,16 @@ class GalleryImagesController < ApplicationController
   # DELETE /gallery_images/1
   # DELETE /gallery_images/1.xml
   def destroy
-    @gallery_image = GalleryImage.find(params[:id])
+    @gallery_image = @project.gallery_images.find(params[:id])
     @gallery_image.destroy
 
     respond_to do |format|
-      format.html { redirect_to(gallery_images_url) }
+      format.html { redirect_to(project_gallery_images_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def get_project
+    @project = Project.find(params[:project_id])
   end
 end
