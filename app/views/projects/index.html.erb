@@ -4,7 +4,7 @@
 
 <% @projects.each do |projects| %>
   <tr>
-    <td><%= link_to '#{projects.title}', project %></td>
+    <td><%= link_to projects.title, project_path(:project) %></td>
     <td><%=h projects.project_type %></td>
     <td><%= link_to 'Edit', edit_project_path(projects) %></td>
     <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
