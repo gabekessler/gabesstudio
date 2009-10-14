@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  layout 'application'
+  
+  
   # GET /pages
   # GET /pages.xml
   def index

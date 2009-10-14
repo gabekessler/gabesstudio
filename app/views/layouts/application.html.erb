@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>GabesStudio :: <%= yield(:title) || "Stuff I Like" %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  
+  <%= javascript_include_tag :defaults %>
+  
+</head>
+<body>
+  <div id="header">
+    <div class="wrapper">
+    
+      <%= link_to "gabesstudio home", root_url, :id => "logo" %>
+    </div><!--wrapper-->
+  </div><!--header-->
+  
+    <div id="content">
+      <div class="wrapper">
+        <div id="left_column">
+          
+          <% if flash[:notice] %>
+            <p class="notice"><%= flash[:notice] %></p>
+          <% end -%>
+          
+            <%= yield %>
+            
+        </div><!--left_column-->
+        <div id="right_column">
+          
+        </div><!--right_column-->
+  <br class="clear" />
+  </div><!--wrapper-->
+    
+  </div><!--content-->
+</body>
+</html>

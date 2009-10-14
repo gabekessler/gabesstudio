@@ -84,6 +84,13 @@ img.thumb {
 	border-width: 4px;
 }
 
+.thumb_link {
+	background-color: transparent;
+}
+.thumb_link img {
+	border-width: 4px;
+}
+
 /* @end */
 
 /* @group NAVIGATION */
