@@ -12,8 +12,7 @@
     <%= f.text_field :caption %>
   </p>
   <p>
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
+    <%= image_tag @gallery_image.image.url(:small), :class => "thumb" %>&nbsp;<%= f.file_field :image %>
   </p>
   <p>
     <%= f.submit 'Update' %>

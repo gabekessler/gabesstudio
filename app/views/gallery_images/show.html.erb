@@ -1,17 +1,12 @@
-<p>
-  <b>Title:</b>
+<h1>
   <%=h @gallery_image.title %>
-</p>
+</h1>
 
-<p>
-  <b>Caption:</b>
-  <%=h @gallery_image.caption %>
-</p>
-
-<p>
   <%= image_tag @gallery_image.image.url(:medium), :class => "medium_image" %>
-</p>
 
+  <p class="caption">
+    <%=h @gallery_image.caption %>
+  </p>
 
 
 <%= link_to 'Edit', edit_gallery_image_path(@gallery_image) %> |
