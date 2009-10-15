@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>GabesStudio :: <%= yield(:title) || "Stuff I Like" %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'reset', 'typography','scaffold' %>
   
   <%= javascript_include_tag :defaults %>
   
@@ -14,7 +14,7 @@
   <div id="header">
     <div class="wrapper">
     
-      <%= link_to "gabesstudio home", root_url, :id => "logo" %>
+      <%= link_to "gabesstudio home", home_url, :id => "logo" %>
     </div><!--wrapper-->
   </div><!--header-->
   
@@ -30,7 +30,7 @@
             
         </div><!--left_column-->
         <div id="right_column">
-          <%= link_to "Home", root_url %><br />
+          <%= link_to "Home", home_url %><br />
           <%= link_to "Gallery", all_images_gallery_images_path() %><br />
           <%= link_to "Projects", projects_path %>
         </div><!--right_column-->
