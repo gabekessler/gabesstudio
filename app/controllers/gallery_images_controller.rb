@@ -1,7 +1,7 @@
 class GalleryImagesController < ApplicationController
   layout 'application'
   
-  before_filter :get_project
+  before_filter :get_project, :except => :all_images
   
   # GET /gallery_images
   # GET /gallery_images.xml
@@ -81,6 +81,11 @@ class GalleryImagesController < ApplicationController
       format.html { redirect_to(project_gallery_images_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def all_images
+    @project = Project.find(:all)
+    @gallery_images = GalleryImage.find(:all)
   end
   
   def get_project

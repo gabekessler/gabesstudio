@@ -1,0 +1,14 @@
+<h1>Listing gallery_images</h1>
+
+<table>
+<% @gallery_images.each do |gallery_image| %>
+  <tr>
+    <td><%= link_to image_tag(gallery_image.image.url(:small)), gallery_image, :class => "thumb_link" %></td>
+    <td><%=h gallery_image.title %></td>
+    <td><%=h gallery_image.caption %></td>
+    <td></td>
+    <td><%= link_to 'Edit', edit_project_gallery_image_path(@project, gallery_image) %></td>
+    <td><%= link_to 'Destroy', gallery_image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
