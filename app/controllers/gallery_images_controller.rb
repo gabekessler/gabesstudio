@@ -78,7 +78,7 @@ class GalleryImagesController < ApplicationController
     @gallery_image.destroy
 
     respond_to do |format|
-      format.html { redirect_to(project_gallery_images_url) }
+      format.html { redirect_to(all_images_gallery_images_url) }
       format.xml  { head :ok }
     end
   end
