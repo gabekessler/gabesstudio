@@ -92,4 +92,6 @@ class PagesController < ApplicationController
    redirect_to(@page) 
   end
   
+ 
+  
 end
