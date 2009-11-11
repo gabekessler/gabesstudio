@@ -14,7 +14,7 @@ module ApplicationHelper
                                :font => 'Arial',  
                                :font_size => 12,  
                                :height => '600px',  
-                               :width => '80%'  
+                               :width => '500px'  
       )  
       wave_panel.to_html  
     end  
