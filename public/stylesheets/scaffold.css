@@ -1,0 +1,40 @@
+/* @override 
+	http://gabesstudio.local/stylesheets/scaffold.css?1257913018
+	http://gabesstudio.local/stylesheets/scaffold.css?1257916198
+	http://gabesstudio.local/stylesheets/scaffold.css?1257917114
+*/
+
+#wave_container {
+	width: 200px;
+	height: 700px;
+}
+
+body {
+}
+
+.container {
+	background-color: #fff;
+}
+
+
+#header {
+	padding-top: 10px;
+}
+
+#left_column, #middle_column, #right_column {
+}
+
+#footer {
+	height: 100px;
+}
+
+#logo {
+	width: 346px;
+	height: 45px;
+	background: url(../images/gs_css_logo.png) no-repeat 0 0;
+	display: block;
+	text-indent: -9999px;
+}
+#logo:hover {
+	background-position: 0 -45px;
+}
