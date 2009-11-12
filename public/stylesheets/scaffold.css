@@ -7,10 +7,12 @@
 }
 
 body {
+	padding: 10px;
 }
 
 .container {
 	background-color: #fff;
+	margin: 0;
 }
 
 

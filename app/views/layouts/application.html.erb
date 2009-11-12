@@ -28,20 +28,20 @@
   </div><!--header-->
   
     <div id="content">
-     <div class="container">
-        <div id="left_column" class="span-5 colborder">
+     <div class="container showgrid">
+        <div id="left_column" class="span-4">
           <p>
-          <%= link_to "home", home_path(), :class => "button span-5" %>
-          <%= link_to "projects", projects_path(), :class => "button span-5" %>
-          <%= link_to "gallery", gallery_images_path(), :class => "button span-5 last" %>
+          <%= link_to "home", home_path(), :class => "button span-3" %><br />
+          <%= link_to "projects", projects_path(), :class => "button span-3" %><br />
+          <%= link_to "gallery", gallery_images_path(), :class => "button span-3 last" %><br />
           <br class="clear">
           </p>
         </div><!--left_column-->
         <div id="middle_column" class="span-4">
-          <br />
+          <%= yield %>
         </div><!--middle_column-->
         <div id="right_column" class="span-14 last">
-          <%= yield %>
+          <br /> 
         </div><!--right_column-->
   </div><!--container-->
   </div><!--content-->
