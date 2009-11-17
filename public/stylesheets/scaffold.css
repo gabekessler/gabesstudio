@@ -8,6 +8,7 @@
 
 body {
 	padding: 10px;
+	color: orange;
 }
 
 .container {
@@ -23,6 +24,20 @@ body {
 #left_column, #middle_column, #right_column {
 }
 
+#left_column a {
+	display: block;
+	background-color: orange;
+	height: 22px;
+	margin: 0 0 1px 0;
+	padding: 18px 0 0 5px;
+	font-weight: bold;
+	color: #000;
+}
+#left_column a:hover {
+	background-color: #000;
+	color: orange;
+}
+
 #footer {
 	height: 100px;
 }
@@ -30,10 +45,18 @@ body {
 #logo {
 	width: 346px;
 	height: 45px;
-	background: url(../images/gs_css_logo.png) no-repeat 0 0;
+	background: url(../images/gs_css_logo_orange_black.png) no-repeat 0 0;
 	display: block;
 	text-indent: -9999px;
 }
 #logo:hover {
 	background-position: 0 -45px;
 }
+
+a {
+	text-decoration: none;
+	color: orange;
+}
+
+
+
