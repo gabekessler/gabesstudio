@@ -1,4 +1,8 @@
-/* @override http://gabesstudio.local/stylesheets/scaffold.css?1258601997 */
+/* @override 
+	http://gabesstudio.local/stylesheets/scaffold.css?1258601997
+	http://gabesstudio.local/stylesheets/scaffold.css?1258604377
+	http://gabesstudio.local/stylesheets/scaffold.css?1258605470
+*/
 
 /* For GabesStudio 11/09 */
 
@@ -60,6 +64,12 @@ a {
 	color: orange;
 }
 
+div.colborder {
+	border-right-style: none;
+	border-left-style: solid;
+	border-left-width: 1px;
+}
+
 /* @group TAG NAV */
 
 ul#tag_list {
@@ -77,6 +87,7 @@ ul#tag_list li a {
 	color: #000;
 	display: block;
 	padding: 18px 5px 2px;
+	font-weight: bold;
 }
 ul#tag_list li a:hover {
 	background-color: #000;
