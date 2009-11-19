@@ -1,4 +1,7 @@
-  <h1><%=h @project.title %></h1>
+<%= render :partial => "tags" %>
+<div class="span-14 last">
+  
+<h1><%=h @project.title %></h1>
 
 <p>
 <%= link_to "#{@project.link}", "http://#{@project.link}", :class => "ss_sprite ss_link_go" %>
@@ -7,6 +10,10 @@
 <p>
   <strong>Category</strong>
   <%=h @project.project_type %>
+</p>
+
+<p>
+  <%= @project.tags %>
 </p>
 
 <p>
@@ -31,3 +38,5 @@
 <%= link_to 'Back', projects_path %>
 <br />
 <%= link_to 'Images', project_gallery_images_path(@project) %>
+
+</div><!--span-14 last-->

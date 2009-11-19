@@ -1,5 +1,8 @@
-/* @override 
-*/
+/* @override http://gabesstudio.local/stylesheets/scaffold.css?1258601997 */
+
+/* For GabesStudio 11/09 */
+
+
 
 #wave_container {
 	width: 200px;
@@ -8,7 +11,6 @@
 
 body {
 	padding: 10px;
-	color: orange;
 }
 
 .container {
@@ -57,6 +59,32 @@ a {
 	text-decoration: none;
 	color: orange;
 }
+
+/* @group TAG NAV */
+
+ul#tag_list {
+	padding: 0;
+	margin: 0;
+}
+
+ul#tag_list li {
+	list-style-type: none;
+	margin-bottom: 2px;
+}
+
+ul#tag_list li a {
+	background-color: orange;
+	color: #000;
+	display: block;
+	padding: 18px 5px 2px;
+}
+ul#tag_list li a:hover {
+	background-color: #000;
+	color: orange;
+	text-align: right;
+}
+
+/* @end */
 
 
 

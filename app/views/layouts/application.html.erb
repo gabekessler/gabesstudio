@@ -19,9 +19,7 @@
       <p><%= link_to "gabesstudio home", home_url, :id => "logo", :class => "span-12 last" %></p>
       <hr>
       <div id="message_area">
-        <% if flash[:notice] %>
-          <p class="notice"><%= flash[:notice] %></p>
-        <% end -%>
+        <%= display_notices %>
       </div><!--message_area-->
       <hr>
     </div><!--container-->
@@ -33,16 +31,17 @@
           <p>
           <%= link_to "home", home_path(), :class => "span-4" %>
           <%= link_to "projects", projects_path(), :class => "span-4" %>
-          <%= link_to "gallery", gallery_images_path(), :class => "span-4" %>
+          <%# link_to "gallery", gallery_images_path(), :class => "span-4" %>
           <br class="clear">
           </p>
         </div><!--left_column-->
-        <div id="middle_column" class="span-4">
-          <br />
-        </div><!--middle_column-->
-        <div id="right_column" class="span-14 last">
+
+        <div id="right_column" class="span-18 last">
           <%= yield %>
+          
+          <br class="clear" />
         </div><!--right_column-->
+        
   </div><!--container-->
   </div><!--content-->
   

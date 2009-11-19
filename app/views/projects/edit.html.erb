@@ -1,3 +1,6 @@
+<%= render :partial => "tags" %>
+<div class="span-14 last">
+
 <h1>Editing project</h1>
 
 <% form_for(@project) do |f| %>
@@ -22,6 +25,10 @@
     <%= f.text_area :text, :class => "text" %>
     </p>
     <p>
+    <%= f.label :tag_list %>
+    <%= f.text_field :tag_list, :size => 80 %>
+    </p>
+    <p>
     <%= f.label :completion_date %><br />
     <%= f.datetime_select :completion_date %>
     </p>
@@ -34,3 +41,5 @@
 
 <%= link_to 'Show', @project %> |
 <%= link_to 'Back', projects_path %>
+
+</div><!--span-14 last-->

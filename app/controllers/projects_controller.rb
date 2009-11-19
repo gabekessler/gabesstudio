@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   layout 'application'
   
+  before_filter :find_tags
+  
   # GET /projects
   # GET /projects.xml
   def index
@@ -84,4 +86,9 @@ class ProjectsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def tag_cloud
+    @tags = Project.tag_counts
+  end
+
 end

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   layout 'application'
-  
+before_filter :find_tags  
   
   # GET /pages
   # GET /pages.xml
