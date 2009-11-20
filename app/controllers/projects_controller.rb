@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   layout 'application'
   
   before_filter :find_tags
+  before_filter :tag
   
   # GET /projects
   # GET /projects.xml
@@ -91,8 +92,5 @@ class ProjectsController < ApplicationController
     @tags = Project.tag_counts
   end
   
-  def tag
-    @projects = Project.find_tagged_with(params[:id])
-  end
 
 end

@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     @tags = Project.tag_counts
   end
   
+  def tag
+    @projects = Project.find_tagged_with(params[:id])
+  end
+  
 end

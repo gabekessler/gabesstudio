@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   layout 'application'
 before_filter :find_tags  
+before_filter :tag
   
   # GET /pages
   # GET /pages.xml
@@ -92,6 +93,5 @@ before_filter :find_tags
    redirect_to(@page) 
   end
   
- 
   
 end
