@@ -90,5 +90,9 @@ class ProjectsController < ApplicationController
   def tag_cloud
     @tags = Project.tag_counts
   end
+  
+  def tag
+    @projects = Project.find_tagged_with(params[:id])
+  end
 
 end

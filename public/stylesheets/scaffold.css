@@ -1,7 +1,6 @@
 /* @override 
-	http://gabesstudio.local/stylesheets/scaffold.css?1258601997
-	http://gabesstudio.local/stylesheets/scaffold.css?1258604377
-	http://gabesstudio.local/stylesheets/scaffold.css?1258605470
+	http://gabesstudio.local/stylesheets/scaffold.css?1258692263
+	http://gabesstudio.local/stylesheets/scaffold.css?1258693599
 */
 
 /* For GabesStudio 11/09 */
@@ -83,17 +82,31 @@ ul#tag_list li {
 }
 
 ul#tag_list li a {
-	background-color: orange;
 	color: #000;
 	display: block;
 	padding: 18px 5px 2px;
 	font-weight: bold;
+}
+
+ul#tag_list li a.css4 {
+	background-color: orange;
+}
+ul#tag_list li a.css3 {
+	background-color: #fbc459;
+}
+ul#tag_list li a.css2 {
+	background-color: #ffeed2;
+}
+ul#tag_list li a.css1 {
+	background-color: #fff;
 }
 ul#tag_list li a:hover {
 	background-color: #000;
 	color: orange;
 	text-align: right;
 }
+
+
 
 /* @end */
 
