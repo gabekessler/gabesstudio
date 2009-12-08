@@ -1,7 +1,7 @@
 class GalleryImagesController < ApplicationController
   layout 'application'
   
-  before_filter :get_project, :except => :all_images
+  before_filter :get_project, :except => [:all_images, :destroy]
   
   # GET /gallery_images
   # GET /gallery_images.xml
@@ -74,11 +74,11 @@ class GalleryImagesController < ApplicationController
   # DELETE /gallery_images/1
   # DELETE /gallery_images/1.xml
   def destroy
-    @gallery_image = @project.gallery_images.find(params[:id])
+    @gallery_image = GalleryImage.find(params[:id])
     @gallery_image.destroy
 
     respond_to do |format|
-      format.html { redirect_to(all_images_gallery_images_url) }
+      format.html { redirect_to(home_url) }
       format.xml  { head :ok }
     end
   end
