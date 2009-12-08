@@ -4,3 +4,4 @@ doc/api
 doc/app
 public/system/images/*
 config/deploy.rb
+config/database.yml
