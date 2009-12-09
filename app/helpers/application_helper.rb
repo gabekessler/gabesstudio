@@ -34,5 +34,9 @@ module ApplicationHelper
     	 end
   	 end
   	 
+  	 def random_image
+  	   @gallery_image = GalleryImage.all.rand.image
+  	 end
+  	 
   
 end

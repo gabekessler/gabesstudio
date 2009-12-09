@@ -13,7 +13,8 @@
   <%= RaveEmbed::JsInclude.new('googlewave.com!w+wM4R-prkD').to_html %> 
   
 </head>
-<body>
+<body style="background: white url(<%= random_image %>) repeat-y right 0;">
+  <div id="site_content">
   <div id="header">
     <div class="container">    
       <p><%= link_to "gabesstudio home", home_url, :id => "logo", :class => "span-12 last" %></p>
@@ -35,6 +36,7 @@
           <%# link_to "gallery", gallery_images_path(), :class => "span-4" %>
           <br class="clear">
           </p>
+          
         </div><!--left_column-->
 
         <div id="right_column" class="span-18 last">
@@ -51,6 +53,6 @@
       <br />
     </div><!--container-->
   </div><!--footer-->
-  
+  </div><!--site_content-->
 </body>
 </html>
