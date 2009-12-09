@@ -1,12 +1,17 @@
 class GalleryImagesController < ApplicationController
   layout 'application'
   
-  before_filter :get_project, :except => [:all_images, :destroy]
+  before_filter :get_project, :except => [:index, :destroy, :edit, :update, :show]
   
   # GET /gallery_images
   # GET /gallery_images.xml
   def index
-    @gallery_images = @project.gallery_images.find(:all)
+    if params[:project_id]
+       @project = Project.find(params[:project_id])
+       @gallery_images = @project.gallery_images
+     else
+       @gallery_images = GalleryImage.all
+     end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,7 +22,7 @@ class GalleryImagesController < ApplicationController
   # GET /gallery_images/1
   # GET /gallery_images/1.xml
   def show
-    @gallery_image = @project.gallery_images.find(params[:id])
+    @gallery_image = GalleryImage.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -38,7 +43,7 @@ class GalleryImagesController < ApplicationController
 
   # GET /gallery_images/1/edit
   def edit
-    @gallery_image = @project.gallery_images.find(params[:id])
+    @gallery_image = GalleryImage.find(params[:id])
   end
 
   # POST /gallery_images
@@ -57,7 +62,7 @@ class GalleryImagesController < ApplicationController
   # PUT /gallery_images/1
   # PUT /gallery_images/1.xml
   def update
-    @gallery_image = @project.gallery_images.find(params[:id])
+    @gallery_image = GalleryImage.find(params[:id])
 
     respond_to do |format|
       if @gallery_image.update_attributes(params[:gallery_image])

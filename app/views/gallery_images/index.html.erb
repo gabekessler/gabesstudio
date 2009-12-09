@@ -7,12 +7,8 @@
     <td><%=h gallery_image.title %></td>
     <td><%=h gallery_image.caption %></td>
     <td></td>
-    <td><%= link_to 'Edit', edit_gallery_image_path(@project, gallery_image) %></td>
+    <td><%= link_to 'Edit', edit_gallery_image_path(gallery_image) %></td>
     <td><%= link_to 'Destroy', gallery_image, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New gallery_image', new_project_gallery_image_url %>
