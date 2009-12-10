@@ -5,7 +5,10 @@
 
 /* For GabesStudio 11/09 */
 
-
+html {
+	height: 98%;
+	width: 98%;
+}
 
 #wave_container {
 	width: 200px;
@@ -13,14 +16,17 @@
 }
 
 body {
-	padding: 10px;
+	padding: 0 0 0 10px;
+	border: 10px solid #2be;
+	height: 100%;
+	width: 100%;
 }
 
 #site_content {
 	background-color: #fff;
 	float: left;
 	height: 100%;
-	width: 1000px;
+	width: 960px;
 }
 
 .container {

@@ -35,7 +35,7 @@ module ApplicationHelper
   	 end
   	 
   	 def random_image
-  	   @gallery_image = GalleryImage.all.rand.image
+  	   @gallery_image = GalleryImage.all.rand.image(:large)
   	 end
   	 
   
