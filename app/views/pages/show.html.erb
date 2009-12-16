@@ -5,7 +5,8 @@
 <h1><%= yield(:title) %></h1>
 
 <% if @page.image? %>
-  <%= image_tag @page.image.url(:long), :class => "long_image" %>
+<%= link_to image_tag(@page.image.url(:long)), page_path(@page) %>
+  <%# image_tag @page.image.url(:long), :class => "long_image" %>
 <% end -%>
 
 

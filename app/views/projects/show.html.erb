@@ -28,7 +28,7 @@
 <div id="gallery_area">
 <h2>Gallery Images</h2>
     <% for gallery_image in @gallery_images %>
-        <%= image_tag gallery_image.image.url(:long), :class => "long_image" %>
+        <%= link_to image_tag(gallery_image.image.url(:long)), gallery_image_path(gallery_image) %>
     <% end %>
 <br class="clear" />
 </div><!--gallery_area-->
