@@ -113,6 +113,6 @@ namespace :local do
   task :sync do
     sync_db
     rsync
-    #sync_content
+    sync_content
   end
 end
