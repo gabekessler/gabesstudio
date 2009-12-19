@@ -20,6 +20,7 @@ body {
 	border: 10px solid #2be;
 	height: 100%;
 	width: 100%;
+	font-size: 14px;
 }
 
 #site_content {
@@ -46,15 +47,18 @@ body {
 #left_column a {
 	display: block;
 	background-color: orange;
-	height: 22px;
 	margin: 0 0 1px 0;
-	padding: 18px 0 0 5px;
+	padding: 18px 5px 2px;
 	font-weight: bold;
 	color: #000;
 }
-#left_column a:hover {
+#left_column a:hover, #left_column a.current {
 	background-color: #000;
 	color: orange;
+}
+
+#left_column a.current {
+	text-align: right;	
 }
 
 #footer {
@@ -114,13 +118,14 @@ ul#tag_list li a.css2 {
 ul#tag_list li a.css1 {
 	background-color: #fff;
 }
-ul#tag_list li a:hover {
+ul#tag_list li a:hover, ul#tag_list a.current {
 	background-color: #000;
 	color: orange;
-	text-align: right;
 }
 
-
+ul#tag_list a.current {
+	text-align: right;
+}
 
 /* @end */
 

@@ -1,13 +1,13 @@
 <%= render :partial => "tags" %>
 <div class="span-14 last">
 
-<h1>Editing project</h1>
+<h1><%= @project.title %></h1>
 
 <% form_for(@project) do |f| %>
   <%= f.error_messages %>
   
   <fieldset>
-    <legend>Edit Project</legend>
+    <legend>Edit <%= @project.title %></legend>
     <p>
     <%= f.label :title %><br />
     <%= f.text_field :title, :class => "title" %>
