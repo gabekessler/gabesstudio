@@ -112,7 +112,7 @@ namespace :local do
   DESC
   task :sync do
     sync_db
-    rsync
+    #rsync
     sync_content
   end
 end

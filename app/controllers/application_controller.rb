@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   
   def tag
     @projects = Project.find_tagged_with(params[:id])
+    @tag = Tag.find_by_name(params[:id])
   end
   
 end
