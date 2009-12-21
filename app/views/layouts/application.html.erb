@@ -31,7 +31,7 @@
         <div id="left_column" class="span-4">
           <p class="span-4">
             <% if logged_in? %><%= current_user.name %><% end -%>
-          <%= link_to "home", home_url(), :class=>((params[:controller] == 'pages') ? 'current': '') %>
+          <%# link_to "home", home_url(), :class=>((params[:controller] == 'pages') ? 'current': '') %>
           <%= link_to "projects", projects_url(), :class=>((params[:controller] == 'projects') ? 'current': '') %>
           <%# link_to "gallery", gallery_images_path(), :class => "span-4" %>
           <br class="clear">

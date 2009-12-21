@@ -1,5 +1,10 @@
-<%= render :partial => "tags" %>
-<div class="span-14 last">
+<div id="middle_column" class="span-4">
+  <ul id="tag_list">
+  <% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+    <li><%= link_to tag.name, { :action => :tag, :id => tag.name }, :class=>((@project.tag_list.include?(tag.name)) ? 'project_tag': css_class)  %></li>
+  <% end %>
+  </ul>
+</div><!--middle_column--><div class="span-14 last">
   
 <h1><%=h @project.title %></h1>
 

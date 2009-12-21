@@ -127,6 +127,12 @@ ul#tag_list a.current {
 	text-align: right;
 }
 
+ul#tag_list a.project_tag {
+	background-color: #222;
+	color: orange;
+	text-align: right;
+}
+
 /* @end */
 
 
