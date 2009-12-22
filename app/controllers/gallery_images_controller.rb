@@ -2,6 +2,7 @@ class GalleryImagesController < ApplicationController
   layout 'application'
   
   before_filter :get_project, :except => [:index, :destroy, :edit, :update, :show]
+  before_filter :login_required, :except => [:show, :index, :get_project]
   
   # GET /gallery_images
   # GET /gallery_images.xml

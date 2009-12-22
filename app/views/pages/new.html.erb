@@ -1,11 +1,12 @@
-<%= render :partial => "/projects/tags" %>
 <div class="span-14 last">
 <h1>New page</h1>
 
 <% form_for @page, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
+  
+  <fieldset>
   <p>
-    <%= f.text_field :header %>
+    <%= f.text_field :header, :class => "title"  %>
   </p>
   
   <p>
@@ -13,13 +14,14 @@
   </p>
   
   <p>
-    <%= f.text_area :pagetext %>
+    <%= f.text_area :pagetext, :class => "text"  %>
   </p>
 
   <p>
-    <%= f.submit 'Create', :class => 'button negative' %>
+    <%= f.submit 'Create', :class => 'button' %>
   </p>
+  </fieldset>
 <% end %>
 
-<%= link_to 'Back', pages_path, :class => 'button negative' %>
+<%= link_to 'List Pages', pages_path, :class => 'button' %>
 </div><!--span-14 last-->

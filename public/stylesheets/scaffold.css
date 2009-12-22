@@ -6,8 +6,7 @@
 /* For GabesStudio 11/09 */
 
 html {
-	height: 98%;
-	width: 98%;
+	height: 100%;
 }
 
 #wave_container {
@@ -16,19 +15,24 @@ html {
 }
 
 body {
-	padding: 0 0 0 10px;
-	border: 10px solid #2be;
 	height: 100%;
 	width: 100%;
 	font-size: 14px;
+	border-top: 10px solid #2be;
+	background-color: #fff;
+}
+
+#super {
+
 }
 
 #site_content {
-	background-color: #fff;
+	background-color: #eee;
 	float: left;
 	height: 100%;
 	width: 960px;
 	border-right: 5px solid #eee;
+	padding: 0 0 0 10px;
 }
 
 .container {

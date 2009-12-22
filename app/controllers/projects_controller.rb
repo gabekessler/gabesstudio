@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   
   before_filter :find_tags
   before_filter :tag
+  before_filter :login_required, :except => [:show, :index, :tag_cloud, :tag]
   
   # GET /projects
   # GET /projects.xml

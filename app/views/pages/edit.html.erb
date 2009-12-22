@@ -1,25 +1,27 @@
-<%= render :partial => "/projects/tags" %>
 <div class="span-14 last">
-<h1>Editing page</h1>
+<h1>Editing <%= @page.header %></h1>
 
 <% form_for @page, :html => { :multipart => true } do |f| %>
 
   <%= f.error_messages %>
+  
+  <fieldset>
   <p>
-    <%= f.text_field :header %>
+    <%= f.text_field :header, :class => "title" %>
   </p>
   
   <p>
     <%= image_tag @page.image.url(:small), :class => "thumb" %>&nbsp;<%= f.file_field :image %>
   </p>
   <p>
-    <%= f.text_area :pagetext %>
+    <%= f.text_area :pagetext, :class => "text" %>
   </p>
   <p>
     <%= f.submit 'Update' %>
   </p>
+  </fieldset>
 <% end %>
 
 <%= link_to 'Show', @page %>&nbsp;:
-<%= link_to 'Back', pages_path %>
+<%= link_to 'List Pages', pages_path %>
 </div><!--span-14 last-->
