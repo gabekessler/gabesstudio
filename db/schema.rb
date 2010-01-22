@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 20091127192435) do
 
   create_table "gallery_images", :force => true do |t|
     t.string   "title",              :limit => 100
-    t.text     "caption",            :limit => 200
+    t.text     "caption",            :limit => 255
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20091127192435) do
     t.string   "title",           :limit => 100
     t.string   "link"
     t.string   "project_type",    :limit => 100
-    t.text     "text",            :limit => 1500
+    t.text     "text"
     t.datetime "completion_date"
     t.datetime "created_at"
     t.datetime "updated_at"
