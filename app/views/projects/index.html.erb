@@ -15,7 +15,7 @@
 <% end %>
 </table>
 
-<br />
-
+<% if logged_in? %>
 <%= link_to 'New project', new_project_path %>
+<% end -%>
 </div><!--span-14 last-->
