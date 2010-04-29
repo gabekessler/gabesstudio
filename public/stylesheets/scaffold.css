@@ -1,6 +1,7 @@
 /* @override 
 	http://gabesstudio.local/stylesheets/scaffold.css?1258692263
 	http://gabesstudio.local/stylesheets/scaffold.css?1258693599
+	http://rails.gabesstudio.com/stylesheets/scaffold.css?1266470280
 */
 
 /* For GabesStudio 11/09 */
@@ -72,7 +73,7 @@ body {
 #logo {
 	width: 346px;
 	height: 45px;
-	background: url(../images/gs_css_logo_orange_black.png) no-repeat 0 0;
+	background: url(/images/gs_css_logo.jpg) no-repeat 0 0;
 	display: block;
 	text-indent: -9999px;
 }
