@@ -9,6 +9,5 @@
   </p>
 
 <% if logged_in? %>
-<%= link_to 'Edit', gallery_image_path(@gallery_image) %> |
-<%= link_to 'Back', gallery_images_path %>
+<%= link_to 'Edit', edit_gallery_image_path(@gallery_image) %>
 <% end -%>

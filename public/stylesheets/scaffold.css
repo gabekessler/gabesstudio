@@ -1,8 +1,4 @@
-/* @override 
-	http://gabesstudio.local/stylesheets/scaffold.css?1258692263
-	http://gabesstudio.local/stylesheets/scaffold.css?1258693599
-	http://rails.gabesstudio.com/stylesheets/scaffold.css?1266470280
-*/
+/* @override */
 
 /* For GabesStudio 11/09 */
 
@@ -19,7 +15,6 @@ body {
 	height: 100%;
 	width: 100%;
 	font-size: 14px;
-	border-top: 10px solid #2be;
 	background-color: #fff;
 }
 
@@ -28,16 +23,15 @@ body {
 }
 
 #site_content {
-	background-color: #eee;
+	background-color: #fff;
 	float: left;
-	height: 100%;
 	width: 960px;
 	border-right: 5px solid #eee;
 	padding: 0 0 0 10px;
+	height: 100%;
 }
 
 .container {
-	background-color: #fff;
 	margin: 0;
 }
 

@@ -9,9 +9,10 @@
     <td><%= link_to "#{project.title}", project %></td>
     <td><%=h project.completion_date.strftime("%m/%d/%y") %></td>
     <td></td>
+    <% if logged_in? %>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <% end -%>  </tr>
 <% end %>
 </table>
 

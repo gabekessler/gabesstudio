@@ -11,8 +11,7 @@
 
 <p><%= @page.pagetext  %></p>
 <% if logged_in? %>
-<%= link_to 'Edit', edit_page_path(@page) %> :
-<%= link_to 'Back', pages_path %>
+<%= link_to 'Edit', edit_page_path(@page) %>
 <% end -%>
 
 <%# wave_panel('googlewave.com!w+wM4R-prkD') %>

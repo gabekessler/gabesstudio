@@ -30,9 +30,7 @@
 </div><!--gallery_area-->
 
 <% if logged_in? %>
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
-<br />
+<%= link_to 'Edit', edit_project_path(@project) %><br />
 <%= link_to 'Images', project_gallery_images_path(@project) %>
 <% end -%>
 
