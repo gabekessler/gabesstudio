@@ -2,7 +2,7 @@
   <%=h @gallery_image.title %>
 </h1>
 
-  <%= image_tag @gallery_image.image.url(:medium), :class => "medium_image" %>
+  <%= image_tag @gallery_image.image.url(:original), :class => "medium_image" %>
 
   <p class="caption">
     <%=h @gallery_image.caption %>
