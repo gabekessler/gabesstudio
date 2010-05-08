@@ -15,7 +15,7 @@ body {
 	height: 100%;
 	width: 100%;
 	font-size: 14px;
-	background-color: #fff;
+	background: #fff url(/images/circle_grid.gif) 0 0;
 }
 
 #super {
