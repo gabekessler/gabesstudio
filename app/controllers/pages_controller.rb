@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-layout :determine_layout
+before_filter :determine_layout
 before_filter :find_tags  
 before_filter :tag
 before_filter :login_required, :except => [:show, :index, :redirect]
