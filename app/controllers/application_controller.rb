@@ -8,8 +8,6 @@ class ApplicationController < ActionController::Base
   
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  
-  layout :determine_layout
 
   def determine_layout
     if iphone_user_agent?
