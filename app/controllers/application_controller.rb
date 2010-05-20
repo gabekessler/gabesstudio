@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   layout :determine_layout
 
   def determine_layout
-    if mobile_safari_subdomain_or_relevant_header?
+    if iphone_user_agent?
       return "mobile"
     end
     return "application"
