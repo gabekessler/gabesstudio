@@ -9,12 +9,6 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
-  def determine_layout
-    if iphone_user_agent?
-      return "mobile"
-    end
-    return "application"
-  end
   
   
   def find_tags
