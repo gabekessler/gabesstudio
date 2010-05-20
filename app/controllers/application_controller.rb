@@ -9,6 +9,15 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
+  layout :determine_layout
+
+  def determine_layout
+    if mobile_safari_subdomain_or_relevant_header?
+      return "mobile"
+    end
+    return "application"
+  end
+  
   
   def find_tags
     @tags = Project.tag_counts
