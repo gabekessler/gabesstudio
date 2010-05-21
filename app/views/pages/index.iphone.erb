@@ -1,5 +1,5 @@
 <ul id="home" title="Projects" selected="true"> 
   <% @projects.each do |project| %>
-  <li><%= link_to "#{project.title}", :target => "_self", project_url(project) %></li> 
+  <li><%= link_to "#{project.title}", :target => :self, project_url(project) %></li> 
   <% end -%>
 </ul>
