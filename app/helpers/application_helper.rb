@@ -38,6 +38,8 @@ module ApplicationHelper
   	   @gallery_image = GalleryImage.all.rand.image(:large)
   	 end
   	 
-  	 
+  	 def clean(text)
+  	   text.gsub(/ /,'')
+  	 end
   
 end

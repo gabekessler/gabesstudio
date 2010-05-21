@@ -24,12 +24,12 @@
     
     <ul id="home" title="Projects" selected="true"> 
       <% @projects.each do |project| %>
-      <li><a href="#<%= project.title %>"><%= project.title %></a></li> 
+      <li><a href="#<%= project.clean.title %>"><%= project.title %></a></li> 
       <% end -%>
     </ul>
     
     <% @projects.each do |project| %>
-    <div id="<%= project.title %>" title="<%= project.title %>">
+    <div id="<%= project.clean.title %>" title="<%= project.title %>">
       <p><%= project.text %></p>
     </div>
     <% end -%>
