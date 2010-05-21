@@ -93,6 +93,8 @@ before_filter :login_required, :except => [:show, :index, :redirect]
   def redirect
    @page = Page.first
    @projects = Project.all
+   @project = Project.find(params[:id])
+   @gallery_images = @project.gallery_images.find(:all)
    
     respond_to do |format|
       format.html {redirect_to(@page) }
