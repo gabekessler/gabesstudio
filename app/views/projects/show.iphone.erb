@@ -1,10 +1,8 @@
- <% @projects.each do |project| %>
-  <ul id="<%= clean(project.title) %>" title="<%= project.title %>">
-    <li><%= project.text %></li>
-    <li><%= project.link %></li>
+  <ul id="<%= clean(project.title) %>" title="<%= @project.title %>">
+    <li><%= @project.text %></li>
+    <li><%= @project.link %></li>
     <li><h2>Gallery Images</h2>
         <% for gallery_image in @gallery_images %>
             <%= gallery_image.image.url(:small) %>
         <% end %></li>
   </ul>
-  <% end -%>

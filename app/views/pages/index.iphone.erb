@@ -1,5 +1,5 @@
 <ul id="home" title="Projects" selected="true"> 
   <% @projects.each do |project| %>
-  <li><a href="#<%= clean(project.title) %>"><%= project.title %></a></li> 
+  <li><%= link_to "#{project.title}", project %></li> 
   <% end -%>
 </ul>
