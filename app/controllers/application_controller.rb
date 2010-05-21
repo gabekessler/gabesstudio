@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
   
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-
   
+  before_filter :set_iphone_format
+
+  def is_iphone_request?
+    request.user_agent =~ /(Mobile\/.+Safari)/
+  end
   
   def find_tags
     @tags = Project.tag_counts
@@ -18,6 +22,14 @@ class ApplicationController < ActionController::Base
   def tag
     @projects = Project.find_tagged_with(params[:id])
     @tag = Tag.find_by_name(params[:id])
+  end
+  
+  private
+
+  def set_iphone_format
+    if is_iphone_request?
+      request.format = :iphone
+    end
   end
   
 end

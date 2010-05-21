@@ -12,6 +12,7 @@ before_filter :login_required, :except => [:show, :index, :redirect]
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @pages }
+      format.iphone
     end
   end
 
