@@ -23,14 +23,15 @@
     </div>
     
     <ul id="home" title="Projects" selected="true"> 
-      <li><a href="#artists">Artists</a></li> 
-      <li><a href="#settings">Settings</a></li> 
-      <li><a href="stats.php">Stats</a></li> 
-      <li><a href="http://code.google.com/p/iui/" target="_self">About</a></li> 
-      <li>Nothing</li> 
       <% @projects.each do |project| %>
       <li><a href="#<%= project.title %>"><%= project.title %></a></li> 
       <% end -%>
-     </ul>
+    </ul>
+    
+    <% @projects.each do |project| %>
+    <div id="<%= project.title %>" title="<%= project.title %>">
+      <p><%= project.text %></p>
+    </div>
+    <% end -%>
 </body>
 </html>
