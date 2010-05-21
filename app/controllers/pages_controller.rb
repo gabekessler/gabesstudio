@@ -92,7 +92,11 @@ before_filter :login_required, :except => [:show, :index, :redirect]
   # Makes first page the Home page
   def redirect
    @page = Page.first
-   redirect_to(@page) 
+   
+    respond_to do |format|
+      format.html {redirect_to(@page) }
+      format.iphone {redirect_to(index)}
+    end
   end
   
   
