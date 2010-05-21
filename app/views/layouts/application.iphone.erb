@@ -18,8 +18,18 @@
 <body>
 
   <div class="toolbar"> 
-          <h1 id="pageTitle"></h1> 
-          <a id="backButton" class="button" href="#"></a> 
-      </div>
+        <h1 id="pageTitle"></h1> 
+        <a id="backButton" class="button" href="#"></a> 
+    </div>
+    
+    <ul id="home" title="Projects" selected="true"> 
+      <li><a href="#artists">Artists</a></li> 
+      <li><a href="#settings">Settings</a></li> 
+      <li><a href="stats.php">Stats</a></li> 
+      <li><a href="http://code.google.com/p/iui/" target="_self">About</a></li> 
+      <li>Nothing</li> 
+      <% @projects.each do |project| %>
+      <li><a href="#<%= project.title %>"><%= project.title %></a></li> 
+     </ul>
 </body>
 </html>
