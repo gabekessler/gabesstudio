@@ -93,7 +93,6 @@ before_filter :login_required, :except => [:show, :index, :redirect]
   def redirect
    @page = Page.first
    @projects = Project.all
-
    
     respond_to do |format|
       format.html {redirect_to(@page) }

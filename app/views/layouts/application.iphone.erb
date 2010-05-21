@@ -22,21 +22,8 @@
         <a id="backButton" class="button" href="#"></a> 
     </div>
     
-    <ul id="home" title="Projects" selected="true"> 
-      <% @projects.each do |project| %>
-      <li><a href="#<%= clean(project.title) %>"><%= project.title %></a></li> 
-      <% end -%>
-    </ul>
+    <%= yield %>
     
-    <% @projects.each do |project| %>
-    <ul id="<%= clean(project.title) %>" title="<%= project.title %>">
-      <li><%= project.text %></li>
-      <li><%= project.link %></li>
-      <li><h2>Gallery Images</h2>
-          <% for gallery_image in @gallery_images %>
-              <%= gallery_image.image.url(:small) %>
-          <% end %></li>
-    </ul>
-    <% end -%>
+   
 </body>
 </html>
