@@ -1,7 +1,7 @@
 
   <ul id="<%= clean(@project.title) %>" title="<%= @project.title %>" selected="true">
     <li><%= @project.text %></li>
-    <li><%= link_to "#{@project.link}", "http://#{@project.link}" %></li>
+    <li><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self" %></li>
     <li><h2>Gallery Images</h2>
         <% for gallery_image in @gallery_images %>
             <%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %>
