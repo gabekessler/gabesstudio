@@ -29,7 +29,7 @@
     </ul>
     
     <% @projects.each do |project| %>
-    <div id="<%= project.title %>" title="<%= project.title %>">
+    <div id="<%= clean(project.title) %>" title="<%= project.title %>">
       <p><%= project.text %></p>
     </div>
     <% end -%>
