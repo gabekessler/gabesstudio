@@ -9,7 +9,7 @@
   <title><%= yield(:title) || "GabesStudio" %></title>
   <%= stylesheet_link_tag("iui", :media => "all") %>
   
-  <%= javascript_include_tag "iui" %>
+  <%# javascript_include_tag "iui" %>
   
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   
@@ -17,10 +17,6 @@
 </head>
 <body>
 
-  <div class="toolbar"> 
-        <h1 id="pageTitle"></h1> 
-        <a id="backButton" class="button" href="#"></a> 
-    </div>
     <%= yield %>
 </body>
 </html>

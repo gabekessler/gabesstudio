@@ -1,3 +1,7 @@
+<div class="toolbar"> 
+      <h1 id="pageTitle"></h1> 
+      <a id="backButton" class="button" href="#"></a> 
+  </div>
 <ul id="home" title="Projects" selected="true"> 
   <% @projects.each do |project| %>
   <li><%= link_to "#{project.title}", project_url(project), :target => '_self' %></li> 

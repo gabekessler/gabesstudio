@@ -1,4 +1,7 @@
-
+<div class="toolbar"> 
+      <h1 id="pageTitle"></h1> 
+      <a id="backButton" class="button" href="#"></a> 
+  </div>
   <ul id="<%= clean(@project.title) %>" title="<%= @project.title %>" selected="true">
     <li><%= @project.text %></li>
     <li><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self" %></li>
