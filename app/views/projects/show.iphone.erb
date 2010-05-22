@@ -1,10 +1,8 @@
 <div class="toolbar"> 
       <h1 id="pageTitle"><%= @project.title %></h1> 
 </div>
-  <ul>
-    <li><%= @project.text %></li>
-    <li><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self" %></li>
-  </ul>
+    <p><%= @project.text %></p>
+    <p><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self" %></p>
     <h2>Gallery Images</h2>
   <ul>
         <% for gallery_image in @gallery_images %>
