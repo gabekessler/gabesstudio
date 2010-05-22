@@ -1,12 +1,13 @@
 <div class="toolbar"> 
       <h1 id="pageTitle"><%= @project.title %></h1> 
-      <a id="backButton" class="button" href="#"></a> 
-  </div>
-  <ul id="<%= clean(@project.title) %>" title="<%= @project.title %>" selected="true">
+</div>
+  <ul>
     <li><%= @project.text %></li>
     <li><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self" %></li>
-    <li><h2>Gallery Images</h2>
+  </ul>
+    <h2>Gallery Images</h2>
+  <ul>
         <% for gallery_image in @gallery_images %>
-            <%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %>
-        <% end %></li>
+            <li><%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %></li>
+        <% end %>
   </ul>

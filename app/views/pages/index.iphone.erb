@@ -1,8 +1,7 @@
 <div class="toolbar"> 
       <h1 id="pageTitle">GabesStudio Projects</h1> 
-      <a id="backButton" class="button" href="#"></a> 
   </div>
-<ul id="home" title="Projects" selected="true"> 
+<ul> 
   <% @projects.each do |project| %>
   <li><%= link_to "#{project.title}", project_url(project), :target => '_self' %></li> 
   <% end -%>
