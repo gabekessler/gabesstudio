@@ -1,5 +1,5 @@
 body {
-	background-color: #ddd;
+	background-color: #fff;
 	color: #222;
 	font-family: Helvetica; 
 	font-size: 14px;
@@ -13,44 +13,49 @@ body {
 		margin: 0;
 		text-align: center;
 		text-shadow: 0px 1px 0px #fff;
-		background-image: -webkit-gradient(linear, left top, left bottom, 
-		                                       from(#ccc), to(#999));
-	}
+	background: url(../images/iphone_back.gif) repeat-x 0 0;
+}
 	
 	h2 {
 		padding: 0 10px;
 	}
 	
 	p {
-		padding: 0 10px;
 	}
 	
 	ul {
 		list-style: none;
-    margin: 10px;
     padding: 0;
+    border-bottom: 1px solid #999999;
 	}
 	
 	ul li {
-		background-color: #FFFFFF;
-		border: 1px solid #999999;
-		margin-bottom: -1px;
-	}
+	border-top: 1px solid #999999;
+	height: 60px;
+	width: 320px;
+}
 	
 	ul li a {
+		background: url(iui_images/listArrow.png) no-repeat right center;
+		padding-right: 20px;
 		color: #222222;
 		display: block;
 		font-size: 17px;
 		font-weight: bold;
-		padding: 12px 10px;
 		text-decoration: none;
-	}
+	width: 300px;
+	float: left;
+	height: 60px;
+}
 	
-	ul li:first-child {
-	    -webkit-border-top-left-radius: 8px;
-	    -webkit-border-top-right-radius: 8px;
-	}
-	ul li:last-child {
-	    -webkit-border-bottom-left-radius: 8px;
-	    -webkit-border-bottom-right-radius: 8px;
-	}
+	ul li a img {
+	padding: 5px;
+	float: left;
+}
+	
+	.link_text {
+		width: 230px;
+	height: 60px;
+	display: table-cell;
+	vertical-align: middle;
+}

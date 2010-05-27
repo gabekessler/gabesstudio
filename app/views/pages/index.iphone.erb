@@ -3,6 +3,8 @@
   </div>
 <ul> 
   <% @projects.each do |project| %>
-  <li><%= link_to "#{project.title}", project_url(project), :target => '_self' %></li> 
+  <li><% link_to(project_url(project)) do %>
+    <%= image_tag(project.gallery_images.first.image.url(:small)) %><span class="link_text"><%= project.title %></span>
+    <% end %></li> 
   <% end -%>
 </ul>
