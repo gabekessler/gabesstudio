@@ -7,23 +7,36 @@ body {
 	padding: 0;
 	}
 	
+#container {
+	background-color: #fff;
+}
+	
 .toolbar {
 	margin: 0;
 	padding: 0;
+	text-align: center;
+	background: transparent url(../images/iphone_back.gif) repeat-x 0 0;
+	width: 320px;
+	height: 50px;
 }
 	
-	h1 {
-		font-size: 24px;
-		padding: 10px 0;
-		margin: 0;
-		text-align: center;
-	background: url(../images/iphone_back.gif) repeat-x 0 0;
+h1 {
+	font-size: 24px;
+	padding: 0;
 	color: #000;
 	text-shadow: #fff 0 1px 1px;
+	text-align: center;
+	margin: 0 auto;
+	height: 50px;
+	max-width: 280px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	line-height: 50px;
 }
 	
 	h2 {
-		padding: 0 10px;
+		padding: 0 5px;
 	}
 	
 	p {
@@ -41,7 +54,8 @@ body {
 	ul li {
 	border-top: 1px solid #999999;
 	height: 60px;
-	width: 320px;
+	width: 310px;
+	padding: 0 5px;
 }
 	
 	ul li a {
@@ -52,13 +66,13 @@ body {
 		font-size: 17px;
 		font-weight: bold;
 		text-decoration: none;
-	width: 300px;
+	width: 290px;
 	float: left;
 	height: 60px;
 }
 	
 	ul li a img {
-	padding: 5px;
+	padding: 5px 5px 5px 0;
 	float: left;
 }
 	
