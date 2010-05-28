@@ -14,3 +14,5 @@ function hijackLinks() {
         loadPage(e.target.href);
     });
 }
+
+
