@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 function loadPage(url) {
    if (url == undefined) {
-      $('#container').load('pages/index.iphone.erb #header ul', hijackLinks);
+      $('#container').load('projects/index.iphone.erb', hijackLinks);
    } else {
       $('#container').load(url + ' #content', hijackLinks);
    }
