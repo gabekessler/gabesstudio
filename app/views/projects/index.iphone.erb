@@ -1,0 +1,12 @@
+<div id="content">
+<div class="toolbar"> 
+      <h1 id="pageTitle">GabesStudio Projects</h1> 
+  </div>
+<ul> 
+  <% @projects.each do |project| %>
+  <li><% link_to(project_url(project)) do %>
+    <%= image_tag(project.gallery_images.first.image.url(:small)) %><span class="link_text"><%= project.title %></span>
+    <% end %></li> 
+  <% end -%>
+</ul>
+</div><!--content-->
