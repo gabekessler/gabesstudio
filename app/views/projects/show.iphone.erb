@@ -1,3 +1,4 @@
+<div id="content">
 <div class="toolbar"> 
       <h1 id="pageTitle"><%= @project.title %></h1> 
 </div>
@@ -11,3 +12,5 @@
             <li><%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %></li>
         <% end %>
   </ul>
+</div><!--content-->
+

@@ -10,6 +10,8 @@
   
   <title><%= yield(:title) || "GabesStudio" %></title>
   <%= stylesheet_link_tag("iphone", :media => "all") %>
+  <%= javascript_include_tag "jquery", :cache => false %>
+  <%= javascript_include_tag "iphone", :cache => false %>
   
 </head>
 <body>
