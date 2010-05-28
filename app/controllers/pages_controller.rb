@@ -96,7 +96,7 @@ before_filter :login_required, :except => [:show, :index, :redirect]
    
     respond_to do |format|
       format.html {redirect_to(@page) }
-      format.iphone {render :layout => false }
+      format.iphone {render :action => "index" }
     end
   end
   
