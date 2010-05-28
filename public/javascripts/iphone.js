@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 function loadPage(url) {
    if (url == undefined) {
-      $('#container').load('test.html', hijackLinks);
+      $('#container').load('/ #content', hijackLinks);
    } else {
       $('#container').load(url + ' #content', hijackLinks);
    }
