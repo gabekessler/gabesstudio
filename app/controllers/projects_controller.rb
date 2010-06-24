@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @project }
-      format.iphone {render :layout => 'application'}
+      format.iphone {render :layout => false}
     end
   end
 
@@ -95,5 +95,8 @@ class ProjectsController < ApplicationController
     @tags = Project.tag_counts
   end
   
+  def view
+    @project = Project.find(params[:id])
+  end
 
 end

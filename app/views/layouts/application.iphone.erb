@@ -9,14 +9,16 @@
   <meta name="apple-touch-fullscreen" content="YES" /> 
   
   <title><%= yield(:title) || "GabesStudio" %></title>
-  <%= stylesheet_link_tag("iphone", :media => "all") %>
-  <%= javascript_include_tag "jquery", :cache => false %>
+  <%= stylesheet_link_tag("iui", :media => "all") %>
+  <%= javascript_include_tag "iui", :cache => false %>
   <%# javascript_include_tag "iphone", :cache => false %>
   
 </head>
 <body>
-<div id="container">
+  <div class="toolbar">
+          <h1 id="pageTitle"></h1>
+          <a id="backButton" class="button" href="#"></a>
+      </div>
   <%= yield %>
-</div><!--container-->
 </body>
 </html>
