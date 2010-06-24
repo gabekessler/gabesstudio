@@ -1,4 +1,4 @@
-<ul id="projects" title="GabesStudio" selected="true"> 
+<ul id="projects" title="GS Projects" selected="true"> 
   <% @projects.each do |project| %>
   <li><% link_to(project_url(project)) do %>
     <%= image_tag(project.gallery_images.first.image.url(:small)) %><span class="link_text"><%= project.title %></span>
