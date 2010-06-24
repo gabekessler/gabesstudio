@@ -3,9 +3,7 @@
   <p><%= @project.text %></p>
   <p><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self", :class => "external_link" %></p>
   <h3>Gallery Images</h3>
-<ul>
       <% for gallery_image in @gallery_images %>
-          <li><%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %></li>
+          <%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %>
       <% end %>
-</ul>
 </div><!--project-->
