@@ -1,8 +1,8 @@
 <div id="project" title="<%= @project.title %>">
-  <%= @project.text %>
-  <%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self", :class => "external_link" %>
-  
-  <h2>Gallery Images</h2>
+  <h2><%= @project.title %></h2>
+  <p><%= @project.text %></p>
+  <p><%= link_to "#{@project.link}", "http://#{@project.link}", :target => "_self", :class => "external_link" %></p>
+  <h3>Gallery Images</h3>
 <ul>
       <% for gallery_image in @gallery_images %>
           <li><%= link_to image_tag(gallery_image.image.url(:small)), gallery_image_path(gallery_image) %></li>

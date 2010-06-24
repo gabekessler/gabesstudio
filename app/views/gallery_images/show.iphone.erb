@@ -1,6 +1,4 @@
-<div id="content">
-<div class="toolbar"> 
-      <h1 id="pageTitle"><%= @gallery_image.title %></h1> 
-  </div>
+<div id="image" title="<%= @gallery_image.title %>">
 <%= image_tag @gallery_image.image.url(:iphone) %>
-</div><!--content-->
+<p><%= @gallery_image.caption %></p>
+</div>
