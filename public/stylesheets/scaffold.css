@@ -1,6 +1,7 @@
 /* @override 
 	http://gabesstudio.local/stylesheets/scaffold.css?1273288954
 	http://gabesstudio.local/stylesheets/scaffold.css?1273290480
+	http://gabesstudio.com/stylesheets/scaffold.css?1296224115
 */
 
 /* For GabesStudio 11/09 */
@@ -18,7 +19,7 @@ body {
 	height: 100%;
 	width: 100%;
 	font-size: 14px;
-	background: #fff url(/images/circle_grid.gif) 0 0;
+	background-color: #424242;
 }
 
 #super {
