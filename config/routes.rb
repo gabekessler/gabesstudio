@@ -46,8 +46,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.home '', :controller => "pages", :action => "redirect"
-  map.root 'http://blog.gabesstudio.com'
+  map.home '', :controller => "pages", :action => "redirect"
 
   # See how all your routes lay out with "rake routes"
 
